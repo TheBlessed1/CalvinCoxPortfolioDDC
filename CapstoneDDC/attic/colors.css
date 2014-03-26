@@ -1,0 +1,167 @@
+@font-face
+{
+	font-family:michroma;
+	src: url("../fonts/michroma.woff") format('woff');
+	michroma-webfont.woff
+}
+#bizName
+{
+	font-family: michroma;
+	font-size: 1.2em;
+}
+#viewPort
+{
+	background-color: #FFFFFF;
+	padding=5px;
+	font-family: sans-serif;
+}
+#topBar
+{
+	position: absolute;
+	float: right:
+	height: 40px;
+	right: 0px;
+	width: 350px;
+	position:absolute;
+	background-color:#D6D6D6;
+	font-variant: small-caps;
+	font-size: .8em;
+	margin: auto;
+	padding: 9px;
+}
+#main
+{
+	font-size: 1em;
+}
+h2
+{
+	font-size: 1.2em;
+}
+#footer
+{
+	font-variant: small-caps;
+}	
+
+#color1
+{
+	position: relative;
+	display: inline-block;
+	padding-top: 16px;
+	top: 5px;
+	height: 80px;
+	width: 80px;
+	border-radius: 18px;
+	background-color:#FFFF00;
+	font-size:	.9em;
+}
+#color2
+{
+	position: relative;
+	display: inline-block;
+	padding-top: 16px;
+	top: 5px;
+	height: 80px;
+	width: 80px;
+	border-radius: 18px;
+	background-color:#99FF33;
+	font-size:	.9em;
+	
+}
+#color3
+{
+	position: relative;
+	display: inline-block;
+	padding-top: 16px;
+	top: 5px;
+	height: 80px;
+	width: 80px;
+	border-radius: 18px;
+	background-color:#3FFF6F;
+	font-size:	.9em;
+}
+#color4
+{
+	position: relative;
+	display: inline-block;
+	padding-top: 16px;
+	top: 5px;
+	height: 80px;
+	width: 80px;
+	border-radius: 18px;
+	background-color:#3FE839;
+	font-size:	.9em;
+}
+#color5
+{
+	position: relative;
+	display: inline-block;
+	padding-top: 16px;
+	top: 5px;
+	height: 80px;
+	width: 80px;
+	border-radius: 18px;
+	background-color:#BAE839;
+	font-size:	.9em;
+}
+#black1
+{
+	position: relative;
+	display: inline-block;
+	padding-top: 16px;
+	top: 5px;
+	height: 80px;
+	width: 80px;
+	border-radius: 18px;
+	background-color:#141414;
+	font-size:	.9em;
+	color: white;
+}
+#black2
+{
+	position: relative;
+	display: inline-block;
+	padding-top: 16px;
+	top: 5px;
+	height: 80px;
+	width: 80px;
+	border-radius: 18px;
+	background-color:#9D9D9D;
+	font-size:	.9em;
+	
+}
+#black3
+{
+	position: relative;
+	display: inline-block;
+	padding-top: 16px;
+	top: 5px;
+	height: 80px;
+	width: 80px;
+	border-radius: 18px;
+	background-color:#BABABA;
+	font-size:	.9em;
+}
+#black4
+{
+	position: relative;
+	display: inline-block;
+	padding-top: 16px;
+	top: 5px;
+	height: 80px;
+	width: 80px;
+	border-radius: 18px;
+	background-color:#D6D6D6;
+	font-size:	.9em;
+}
+#black5
+{
+	position: relative;
+	display: inline-block;
+	padding-top: 16px;
+	top: 5px;
+	height: 80px;
+	width: 80px;
+	border-radius: 18px;
+	background-color:#EFEFEF;
+	font-size:	.9em;
+}

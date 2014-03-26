@@ -1,0 +1,165 @@
+html, body
+/* properties set to make % based heights work on all children and ancestors, and produces a scalable margin-like effect. */
+{
+	height: 98%;
+	width: 98%;
+	padding: 1em;
+	background-color: #BABABA;
+	
+}
+
+@font-face
+/* points to temporary file structure, change when template is finished */
+{
+	font-family:michroma;
+	src: url("../fonts/michroma.woff") format('woff');
+	michroma-webfont.woff
+}
+
+/* temporary p tag selector */
+
+p
+
+{
+	padding: 25px;
+}
+
+#viewport
+{
+	height: 100%;
+	width: 100%;
+	background-color: #BABABA;
+}
+
+#header
+{	
+	margin-top: 3%;
+	position: relative;
+	height: 300px;
+	width: 100%;
+	background-color: #9D9D9D;
+}
+
+#logo
+{
+	float: left;
+	clear: left;
+	background-color: #9D9D9D;
+}
+
+#name
+{
+	float: right;
+	clear: right;
+	background-color: #9D9D9D;
+	margin-top: 130px;
+	font-family: michroma;
+	font-size: 2em;
+	margin-right:20px;
+	color: #00FF00;
+}
+
+#regAbout
+{
+	width: 14.5%;
+	height: 5%;
+	float: right;
+	clear: right;
+	position: relative;
+	color: #00FF00;
+	z-index: 200;
+}
+
+.siteMapButton
+{
+	float:left;
+	position: relative;
+	width: 25%;
+	height: 100%;
+}
+
+#siteMap
+{
+	width: 100%;
+	position: relative;
+	height: 20%;
+	background-color: #9D9D9D;
+}	
+
+#contentWindow
+{
+	float: left;
+	margin-top:15px;
+	position: relative;
+	width: 66.6%;
+	height: 100%;
+	background-color:#5B5B5B;
+	overflow: auto;
+	font-family: michroma;
+	color: #00FF00;
+
+}
+
+#RSSWindow
+{
+	margin-top:15px;
+	position: relative;
+	float: right;
+	width: 33.3%;
+	height: 100%;
+	background-color: #5B5B5B;
+	overflow: auto;
+	color: #00FF00;
+
+
+}
+
+#footer
+{
+	background-color: #CCCCCC;
+	height: 3.75%; 
+	width:63.5%;
+	position: fixed;
+	bottom: 0;
+	font-variant: small-caps;
+	padding: 5px;
+}
+h2
+{
+	font-size: 1.2em;
+	margin-left: 10px;
+	font-family: michroma;
+}
+h3
+{
+	font-size: 1.5em;
+	margin-left: 40px;
+	font-family: michroma;
+	color: #00FF00;
+}
+
+table
+{
+	border: 2px solid black;
+	text-align:right;
+	padding:20px;
+	border:2px #9D9D9D;
+	background-color:#D6D6D6;
+	color: #141414;
+	margin-left: 60px;
+}
+td
+{
+	padding:10px;
+}
+th
+{
+	padding:10px;
+}
+
+
+/* footerSpan needs its own selector. */ 
+#footerSpan
+{
+
+}

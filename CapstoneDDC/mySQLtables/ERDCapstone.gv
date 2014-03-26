@@ -1,0 +1,87 @@
+graph Trollolol
+{
+	/*
+	In the beginning, there were entities...
+	solid-boxes represent an entity, 
+	double-box represent a weak entity, 
+	ovals represent a field (also called an attribute),
+	an oval with underlined text represents a primary key,
+	and a diamond represents a relation.*/
+	
+	/*entities */
+	"Users" 			[shape=box];
+	"Address"			[shape=box];
+	"Custom RSS"		[shape=box];
+	"Avatar"			[shape=box];
+	"User Profile"		[shape=box];
+	
+	/*Primary Keys*/
+	userId_pk			[label=<<u>User Id</u>>];
+	addressId_pk		[label=<<u>Address ID</u>>];
+	rssId_pk			[label=<<u>RSS ID</u>>];
+	avatarId_pk		[label=<<u>Avatar ID</u>>];
+	userProfileId_pk    [label=<<u>User Profile ID</u>>];
+	
+	/*Relations; there's a lot of having around here.*/
+	have0			[shape=diamond]		[label="make"];
+	have1			[shape=diamond]		[label="enter"];
+	have2			[shape=diamond]		[label="configure"];
+	have3			[shape=diamond]		[label="steal"];
+
+	"Users" -- have0 [label=1];
+	have0  -- "User Profile" [label=1];
+	"Users" -- have1 [label=1];
+	have1 -- "Address"[label=1];
+	"Users" -- have2 [label=1];
+	have2 -- "Custom RSS"[label=n];
+	"Users" -- have3 [label=1];
+	have3 -- "Avatar"[label=1];
+	
+	
+	/*User Attributes*/
+	
+	"Users" -- userId_pk;
+	"Users" -- "email";
+	"Users" -- "Nonce";
+	
+	/*Address Attributes*/
+
+	userId0		[label="User ID"];
+	userId1		[label="User ID"];
+	userId2		[label="User ID"];
+	userId3		[label="User ID"];
+	
+	"Address" -- userId0;
+	"Address" -- "Street 1";
+	"Address" -- "Street 2";
+	"Address" -- "Postal Code";
+	"Address" -- "City";
+	"Address" -- "State";
+	"Address" -- addressId_pk;
+	/*Custom RSS Attributes*/
+
+	/*Avatar Attributes*/
+	
+	"Avatar" -- userId1;
+	"Avatar" -- "Image";
+	"Avatar" -- avatarId_pk;
+	
+
+	/*User Profile Attributes*/
+	
+	"User Profile" -- "First Name";
+	"User Profile" -- "Last Name";
+	"User Profile" -- "Company";
+	"User Profile" -- "Title";
+	"User Profile" -- userId3;
+	"User Profile" -- userProfileId_pk;
+	
+	/*Custom RSS Attributes*/
+	
+	"Custom RSS" -- userId2;
+	"Custom RSS" -- "Feed Name";
+	"Custom RSS" -- "Feed URL";
+	"Custom RSS" -- rssId_pk;
+	
+	/*~fin*/	
+}

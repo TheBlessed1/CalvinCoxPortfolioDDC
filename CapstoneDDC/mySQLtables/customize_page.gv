@@ -1,0 +1,86 @@
+digraph G
+{
+	graph [fontsize=24, label="Customize User Page"];
+	/* client side */
+	node [shape=box,style=filled,fillcolor="#ccffcc"];
+	
+	
+	"User Logs on" 							[shape=ellipse];
+	"User enters custom choices into form" 		[shape=ellipse];
+	"User enters custom choices into form" 		[shape=ellipse];
+	"Display User Customized Page"				[shape=ellipse];
+	"Is User Valid?" 							[shape=diamond];
+	"Form data valid?" 						[shape=diamond];
+	
+	/*start session and validate user*/
+	"User Logs on"->				"Start a PHP Session";		
+	"Start a PHP Session"->			"Save User Info Into Session Array";
+	"Save User Info Into Session Array"->	"Kerberos Validates User";
+	"Kerberos Validates User"->		"Is User Valid?";
+	"Is User Valid?"->				"Throw an Exception1"[label="No"];
+	"Is User Valid?"->				"User enters custom choices into form"[label="Yes"];
+	
+	/*user enters choices*/
+	
+	"User enters custom choices into form"->"Form data valid?" [shape=diamond];
+	"Form data valid?" -> 			"Throw an Exception1"[label="No"];
+	"Form data valid?" -> 			"Form data posted to PHP" [label="Yes"];
+	
+	/* server side: PHP */
+	/* post data to php into class*/
+	
+	node [shape=box,style=filled,fillcolor="#ccccff"];
+	
+	"PHP form data valid?" 			[shape=diamond];
+	"Throw an Exception1" 			[shape=ellipse];
+	"Form data posted to PHP" -> 		"Form validated by PHP";
+	"Form validated by PHP" -> 		"PHP form data valid?";
+	"PHP form data valid?" ->			"Throw an Exception1" [label="No"];
+	"PHP form data valid?" -> 			"Put $_POST Data into a Class" [label="Yes"];
+	
+	/* server side: mySQL */
+	/* set up shapes and colors*/
+	
+	node [shape=box,style=filled,fillcolor="#FFD8D8"];
+	"Connection Successful?" 			[shape=diamond];
+	"mySQL Insert Statement Valid?" 	[shape=diamond];
+	"Insert Execution Successful?" 		[shape=diamond];
+	"Select Execution Successful?" 		[shape=diamond];
+	"More Data to Post?" 			[shape=diamond];
+	"mySQL Select Statement Valid?"	[shape=diamond];
+
+	
+	/* insert data choices into CustomFeed table*/
+	"Put $_POST Data into a Class" -> 	"Connect to mySQL";
+	"Connect to mySQL" -> 			"Connection Successful?";
+	"Connection Successful?" -> 		"Throw an Exception1" [label="No"];
+	"Connection Successful?" -> 		"Prepare mySQL Insert Statement" [label="Yes"];
+	"Prepare mySQL Insert Statement" -> "mySQL Insert Statement Valid?";
+	"mySQL Insert Statement Valid?" -> 	"Throw an Exception1" [label="No"];
+	"mySQL Insert Statement Valid?" -> 	"Execute mySQL Statement" [label="Yes"];
+	"Execute mySQL Statement" -> 		"Insert Execution Successful?";
+	"Insert Execution Successful?" -> 	"Throw an Exception1" [label="No"];
+	"Insert Execution Successful?" -> 	"Data Posted to mySQL" [label="Yes"];
+	"Data Posted to mySQL" -> 		"More Data to Post?"
+	"More Data to Post?" -> 			"Prepare mySQL Insert Statement" [label="Yes"];
+	
+	/*select feed choices from mySQL*/
+	"More Data to Post?" ->			"Put Custom Data into a Class"[label="No"];
+	"Put Custom Data into a Class"->	"Prepare my SQL Select Statement" ;
+	"Prepare my SQL Select Statement" ->"mySQL Select Statement Valid?";
+	"mySQL Select Statement Valid?"-> 	"Throw an Exception1"[label="No"];
+	"mySQL Select Statement Valid?" -> 	"Execute  mySQL Select Statement" [label="Yes"];
+	"Execute  mySQL Select Statement" ->"Select Execution Successful?";
+	"Select Execution Successful?" -> 	"Throw an Exception1" [label="No"];
+	"Select Execution Successful?" -> 	"Save data in Session Array" [label="Yes"];
+	"Save data in Session Array" -> 		"More Data to Select?"
+	"More Data to Select?" -> 			"Prepare my SQL Select Statement" [label="Yes"];
+	"More Data to Select?" -> 			"Close mySQL Connection" [label="No"];
+	"Close mySQL Connection" -> 		"Prepare Customized Page";
+	
+	/*prepare the custom page for user*/
+	node [shape=box,style=filled,fillcolor="#ccffcc"];
+	"Prepare Customized Page"->		"Display User Customized Page";
+
+	
+}

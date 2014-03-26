@@ -1,0 +1,210 @@
+/* This style sheet contains the desktop-specific sizing for elements */
+
+html, body
+{
+	height: 100%;
+	width: 100%;
+	background-color: #FFFFFF;
+}
+
+@font-face
+/* points to temporary file structure, change when template is finished */
+{
+	font-family: michroma;
+	src: url("../fonts/michroma.woff") format('woff');
+	michroma-webfont.woff
+}
+
+/* temporary p tag selector */
+
+p
+{
+	padding: 5px;
+	color: #5B5B5B;
+}
+
+#viewport
+{
+	width: 100%
+	background-color: #FFFFFF;
+}
+
+#header
+{	
+	margin-top: 3%;
+	position: relative;
+	height: 300px;
+	width: 100%;
+	background-color: #FFFFFF;
+}
+
+#logo
+{
+	float: left;
+	clear: left;
+	background-color: #FFFFFF;
+	padding-left: 35px;
+}
+
+#name
+{
+	float: right;
+	clear: right;
+	background-color: #FFFFFF;
+	font-family: michroma;
+	font-size: 2em;
+	height: auto;
+	color: #141414;
+	padding-right: 35px;
+}
+
+#regAbout p
+{
+	color: #9D9D9D;
+}
+
+#regAbout
+{
+	width: 14.5%;
+	height: 5%;
+	float: right;
+	clear: right;
+	position: relative;
+	z-index: 200;
+}
+
+
+.siteMapImg
+{
+	width: 100px;
+	height: 100px;
+	margin-left: 30%;
+}
+
+.siteMapButton
+{
+	float: left;
+	position: relative;
+	width: 100px;
+	height: 100px;
+	width: 25%;
+	height: 25%;
+	background-color: #FFFFFF;
+	margin: #9D9D9D;
+}
+
+nav
+{
+	width: 100%;
+	position: relative;
+	height: 25%;
+	background-color: #FFFFFF;
+	padding-bottom: 20px;
+}	
+
+aside #feeddiv
+{
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+#contentWindow
+{
+	float: left;
+	position: relative;
+	width: 35%;
+	height: 600px;
+	background-color: #FFFFFF;
+	overflow: scroll;
+	margin-top: 20px;
+	font-family: michroma;
+	color: #141414;
+	margin-top: 40px;
+	margin-bottom: 20px;
+	text-align: left;
+	font-size: 1em;
+}
+
+
+#RSSWindow
+{
+	position: relative;
+	float: right;
+	width: 65%;
+	height: 600px;
+	background-color: #FFFFFF;
+	overflow: scroll;
+	color: #141414;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: michroma;
+	font-size: 1em;
+}
+
+#RSSWindow p
+{
+	color: #9D9D9D;
+}
+
+h2
+{
+	font-size: 1em;
+	margin-left: 10px;
+}
+
+h3
+{
+	font-size: 1em;
+	margin-left: 10px;
+	font-family: michroma;
+	color: #141414;
+}
+
+table
+{
+	border: 2px solid black;
+	text-align:left;
+	padding:20px;
+	border:2px #9D9D9D;
+	background-color: #FFFFFF;
+	color: #141414;
+	margin-left: 60px;
+	font-size: .8em;
+}
+
+td
+{
+	padding: 10px;
+}
+
+th
+{
+	padding: 10px;
+}
+
+footer
+{
+	float: left;
+	clear: both;
+	background-color: #BABABA;
+	height: 4.5%; 
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	font-variant: small-caps;
+	padding: 5px;
+	z-index: 105;
+}
+
+.footNavTag
+{
+	height: 30px;
+	width: 30px;
+}
+/* footerSpan needs its own selector. */ 
+#footSpan
+{
+
+}

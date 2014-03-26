@@ -1,0 +1,7 @@
+<?php
+// credentials for both kerberos and mysql daemons
+$MYSQL_CREDENTIALS 	= "THIS IS A TEST<br/>";
+$MYSQL_APP 		= "OF THE EMERGENCY BROADCASTING SYSTEM<br/><br/><br/>";
+$KERBEROS_PRINCIPAL = 	"BEEEEEEEEEEEEEEEEEEEEEEEE<br/>";
+$KERBEROS_KEY 		= 	"EEEEEEEEEEEEEEEEEEEEEEEEP<br/>";
+?>
